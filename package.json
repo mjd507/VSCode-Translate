@@ -1,0 +1,59 @@
+{
+  "name": "translate-cn",
+  "displayName": "Translate-CN",
+  "description": "A translate Plugin for Visual StudioCode, For Chinese, the translation service is provided by 「YouDao」",
+  "version": "1.0.0",
+  "publisher": "mjd507",
+  "engines": {
+    "vscode": "^1.18.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:translate.text",
+    "onCommand:translate.input"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [{
+        "command": "translate.text",
+        "title": "translate text"
+      },
+      {
+        "command": "translate.input",
+        "title": "translate input"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Translate-CN Config",
+      "properties": {
+        "translate.appKey": {
+          "type": "string",
+          "default": "075aa28fd372d61b",
+          "description": "建议在 user setting 中修改为自己注册获取的 appkey"
+        },
+        "translate.appSecret": {
+          "type": "string",
+          "default": "dse5SgFXbSNfkq3PrQhzeSlH0birnloZ",
+          "description": "建议在 user setting 中修改为自己注册获取的 appSecret"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.6",
+    "eslint": "^4.6.1",
+    "@types/node": "^7.0.43",
+    "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "md5": "^2.2.1"
+  }
+}
