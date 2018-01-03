@@ -15,6 +15,7 @@ cmd+shift+p 调出命令面板，输入 tranlate input，即可翻译输入的�
 
 在快捷键配置文件（keybindings.json）中，可以按照下面的快捷键配置，也可以替换成自己习惯的快捷键
 
+```json
 {
   "key": "alt+t",
   "command": "translate.text",
@@ -24,7 +25,7 @@ cmd+shift+p 调出命令面板，输入 tranlate input，即可翻译输入的�
   "command": "translate.input",
   "when": "editorFocus"
 }
-
+```
 
 ## Release Notes
 
